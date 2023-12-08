@@ -1,0 +1,10 @@
+body{
+    text-align: center;
+}
+
+.container{
+    padding: 10px;
+    border: 2px solid black;
+    margin: 150px;
+    
+}

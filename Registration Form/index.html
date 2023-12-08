@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <div>
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name (optional)">
+        </div>
+        <div class="Basic_info">
+            <p>Enter your birthday and gender</p>
+            <select name="Month" id="bday_month">
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+            <input id="bday_date" type="text" placeholder="Day">
+            <input id="bday_year" type="text" placeholder="Year">
+            <select name="Year" id="bday_year">
+                <option value="Male">Male</option>
+                <option value="Female">FeMale</option>
+                <option value="Not Say">Rather than not say</option>
+            </select>
+        </div>
+        <div class="email_address">
+            <p>Pick a address for your account or create one.</p>
+            <input type="email" placeholder="Enter your custom email">
+        </div>
+        <div class="password">
+            <p>Create a strong password with a mix of letters, numbers and symbols</p>
+            <input type="password" placeholder="Password">
+            <input type="password" placeholder="Confirm">
+        </div>
+    </div>
+
+</body>
+</html>

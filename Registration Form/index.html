@@ -5,32 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
 </head> 
 <body>
+    <form class="form_1" action="/" method="post">
     <div class="container">
         <h1 class="center">Registration Form</h1>
         <div class="Basic_info">
             Name
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name (optional)">
+            <input type="text" placeholder="First Name" name="Fname">
+            <input type="text" placeholder="Last Name (optional)" name="Lname">
         </div>
         <div class="Basic_info">
             <p>BirthDate</p>
-            <input type="date">
+            <input type="date" name="BDate">
         </div>
         <div class="email_address Basic_info">
             <p>Create one email address</p>
-            <input type="email" placeholder="Enter your custom email">
+            <input type="email" placeholder="Enter your custom email" name="email">
         </div>
         <div class="password Basic_info">
             <p>Password</p>
-            <input type="password" placeholder="Password">
+            <input type="password" placeholder="Password" name="pass">
             <input type="password" placeholder="Confirm">
         </div>
         <div class="submit Basic_info">
             <button class="submit" value="Submit" aria-placeholder="Submit">Register </button>
         </div>
     </div>
+    </form>
 
 </body>
 </html>

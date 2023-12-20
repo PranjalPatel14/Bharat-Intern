@@ -1,6 +1,6 @@
 body{
     font-family: Montserrat;
-    background: url(/pexels-christian-heitz-842711.jpg) center/cover no-repeat;
+    background: url(pexels-christian-heitz-842711.jpg) center/cover no-repeat;
 }
 .container{
     display: block;
@@ -44,3 +44,4 @@ input{
     /* color: black; */
     
 }
+

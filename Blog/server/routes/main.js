@@ -21,6 +21,40 @@ router.get('/about', (req, res) => {
     res.render('about');
 });
 
+router.get('/post/:id', async (req, res) => {
+    try{
+        
+        const slug = req.params.id;
+        
+        const data = await Post.findById({_id: slug});
+        const locals = {
+            title: data.title,
+            description: "Simple Blog Website using mongo DB, Express JS."
+        }
+        res.render('post', {locals, data });
+    } catch(error){
+        console.log(error); 
+    }
+});
+
+router.post('/search', (req, res) => {
+    try{
+        const locals = {
+            title: "Search",
+            description: "Simple Blog Website using mongo DB, Express JS."
+        }
+        const data = Post.find();
+        let searchTerm = req.body.searchTerm;
+
+        console.log(searchTerm);
+
+
+        res.render(searchTerm);
+    } catch(error){
+        console.log(error); 
+    }
+});
+
 // function insertPostData() {
 //     Post.insertMany([
 //         {

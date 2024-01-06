@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchClose = document.getElementById('searchClose');
 
 
-    for (var i = 0; i < allButtons.length; i++) {
-        allButtons[i].addEventListener('click', function () {
+    for (var i = 0; i < allbuttons.length; i++) {
+        allbuttons[i].addEventListener('click', function () {
             searchBar.style.visibility = 'visible';
             searchBar.classList.add('open');
             this.setAttribute('aria-expanded', 'true');

@@ -39,7 +39,7 @@ app.set('view engine','ejs');
 app.use('/',require('./server/routes/main'))
 app.use('/',require('./server/routes/admin'))
 
-app.get('',(res,req)=> {
+app.get('/',(res,req)=> {
     res.send("hello");
 })
 app.listen(PORT ,  ()=> {

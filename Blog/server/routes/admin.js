@@ -161,4 +161,36 @@ router.post('/add-post', checkMiddleware, async (req,res)=>{
     }
 })
 
+// GET
+// EDIT-POST - EDIT BLOG
+router.get('/edit-post/:id', checkMiddleware, async (req,res)=>{
+    try {
+        const data = await Post.findOne({_id: req.params.id});
+        const locals = {
+            title: "Edit Post"
+        }
+        res.render('admin/edit-post',{
+            data, layout:dir, locals
+        });
+    } catch (error) {
+        console.log(error);
+    }
+})
+
+// PUT
+// EDIT-POST - EDIT BLOG
+router.put('/edit-post/:id', checkMiddleware, async (req,res)=>{
+    try {
+        await Post.findByIdAndUpdate(req.params.id,{
+            title: req.body.title,
+            body: req.body.body,
+            updateAt: Date.now()
+        })
+        res.redirect(`/edit-post/${req.params.id}`);
+
+    } catch (error) {
+        console.log(error);
+    }
+})
+
 module.exports = router;

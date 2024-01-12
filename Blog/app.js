@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(session({
-    secret: 'keyboard cat', // A secret key used to sign the session ID cookie
+    secret: 'keyboard cat', 
     resave: false,
     saveUninitialized: true,
     store: MongoStore.create({

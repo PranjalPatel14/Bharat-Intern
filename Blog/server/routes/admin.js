@@ -7,9 +7,6 @@ const jwt = require('jsonwebtoken');
 const dir = '../views/layouts/admin';
 const jwtSecret = process.env.JWT_SECRET;
 
-
-
-
 // Check Login
 const checkMiddleware = (res,req,next)=>{
     const token  = res.cookies.token;

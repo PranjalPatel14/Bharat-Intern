@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use(express.json);
 
 app.get('/', function (req, res) {
     res.sendFile(__dirname + "/index.html");
@@ -13,7 +14,6 @@ app.get('/', function (req, res) {
 app.post('/', async function main(req, res) { // Add 'req' and 'res' parameters
     const uri = "mongodb+srv://patelpranjal:ab1298775@cluster0.eroov6l.mongodb.net/?retryWrites=true&w=majority";
 
-    // Creating an Instance of MongoDB
     const client = new MongoClient(uri);
 
     try {
@@ -26,11 +26,9 @@ app.post('/', async function main(req, res) { // Add 'req' and 'res' parameters
             Password: req.body.pass
         });
 
-        // Redirect to the homepage after successful insertion
         res.redirect("/");
     } catch (e) {
         console.error(e);
-        // Handle errors more gracefully, you might want to send an error response to the client
         res.status(500).send('Internal Server Error');
     } finally {
         await client.close();
